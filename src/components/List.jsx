@@ -1,6 +1,6 @@
 function List(array){
     const newList = array.skills.map((item)=> (
-        <li>{item}</li>
+        <li key={item}>{item}</li>
     ))
 
     return (
