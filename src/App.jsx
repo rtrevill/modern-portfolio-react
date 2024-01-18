@@ -7,13 +7,19 @@ import Resume from './components/Resume';
 // import Card from './components/Card';
 
 function App() {
+  const receiveRequest = (name) => {
+    console.log(`message received ${name.name}`)
+  }
+
   return  (
     <div>
       <Header />
       <Navbar />
       <AboutMe />
       <Portfolio />
-      <Contact />
+      <Contact 
+        onSubmit={receiveRequest}
+      />
       <Resume />
       {/* <Card />
       <Card />
