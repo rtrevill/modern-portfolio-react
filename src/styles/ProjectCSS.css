@@ -1,5 +1,17 @@
 .jiggly{
     animation: bounce;
     animation-duration: 1s;
-    color: red;
+}
+
+.jiggly:hover{
+    opacity: 0.8;
+}
+
+.cardbody{
+    opacity: 0;
+}
+
+.cardbody:hover{
+    opacity: 1;
+    transition: all 600ms ease-out;
 }

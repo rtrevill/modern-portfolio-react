@@ -9,6 +9,7 @@ function Portfolio(){
             <Card 
             key={entry.name}
             name={entry.name}
+            image={entry.image}
             content={entry.details}
             />
         )
