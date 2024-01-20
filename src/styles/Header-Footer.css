@@ -1,0 +1,39 @@
+.header {
+  background: #f9b713;
+  height: 200px;
+}
+
+#headerLogo {
+  display: inline-block;
+  width: 25%;
+  margin: 0;
+  padding-top: 75px;
+  text-align: left;
+  color: white;
+  font-size: 3rem;
+}
+
+.nav-container {
+  display: inline-block;
+  width: 75%;
+}
+
+.footer{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+
+.footerLogo{
+  width: 50px;
+  height: 50px;
+  margin: 7px 15px;
+  opacity: 77%;
+}
+
+.footerLogo:hover{
+  opacity: 100%;
+  transition: all 200ms ease-in;
+}
