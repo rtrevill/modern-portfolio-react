@@ -14,6 +14,7 @@ import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
 import Error from './components/Error'
+import Footer from './components/Footer';
 
 const router = createBrowserRouter([
     {
@@ -23,7 +24,10 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <AboutMe />,
+                element: <>
+                            <AboutMe />
+                            <Footer />
+                        </>,
             },
             {
                 path: 'contact',
@@ -31,7 +35,10 @@ const router = createBrowserRouter([
             },
             {
                 path: 'resume',
-                element: <Resume />,
+                element: <>
+                            <Resume />
+                            <Footer />
+                        </>,
             },
             {
                 path: 'portfolio',
