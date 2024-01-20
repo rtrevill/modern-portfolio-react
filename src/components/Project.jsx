@@ -5,7 +5,7 @@ import '../styles/ProjectCSS.css'
 const styles = {
   card: {
     margin: 20,
-    background: '#e8eaf6',
+    // background: '#e8eaf6',
   },
 };
 //   heading: {
@@ -29,13 +29,12 @@ function Card(props) {
 //   name: PropTypes.string.isRequired
 // }
 
-const {name, content} = props
+const {name, content, image} = props
 
   return (
-    <div className='col-sm-4 jiggly' style={{height: '200px'}}>
+    <div className='col-sm-4 jiggly' style={{height: '200px', backgroundImage: `url(${image})`, backgroundSize: 'contain'}}>
     <div className="card" style={{...styles.card}}>
-    {/* <div className="card"> */}
-      <div className="card-body">
+      <div className="card-body cardbody">
         <h3 className="card-title">{name}</h3>
         <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
         <p className="card-text">{content}</p>
