@@ -1,0 +1,5 @@
+.jiggly{
+    animation: bounce;
+    animation-duration: 1s;
+    color: red;
+}
