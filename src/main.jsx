@@ -7,7 +7,7 @@ import App from './App';
 
 import AboutMe from './components/AboutMe';
 // import Card from './components/Card'
-import Contact from './components/Contact';
+// import Contact from './components/Contact';
 // import Header from './components/Header';
 // import List from './components/List';
 // import Navbar from './components/Navbar';
@@ -15,6 +15,7 @@ import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
 import Error from './components/Error'
 import Footer from './components/Footer';
+import ContactPage from './components/ContactPage';
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'contact',
-                element: <Contact />,
+                element: <ContactPage />,
             },
             {
                 path: 'resume',
