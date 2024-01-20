@@ -9,14 +9,16 @@ function Portfolio(){
             <Card 
             key={entry.name}
             name={entry.name}
-            content={entry.content}/>
+            content={entry.details}
+            />
         )
     })
 
     return(
-        <div className="">
-            This is a portfolio page
-            {contentForPage}
+        <div className="row">
+            <div className="">
+                {contentForPage}
+            </div>
         </div>
     )
 }
