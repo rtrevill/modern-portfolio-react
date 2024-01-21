@@ -1,8 +1,10 @@
+import '../styles/AboutMe.css'
+
 function AboutMe(){
     return(
-        <div>
+        <div className="aboutMe-container">
             <h1>About Me</h1>
-            <img src="/cat.jpg" alt="gamer cat" width={140}/>
+            <img src="/cat.jpg" alt="gamer cat"/>
             <div>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, quos ex? Minima sunt eligendi eos enim quisquam iusto distinctio praesentium beatae ab pariatur. Quia, itaque nemo dolore doloremque ducimus voluptatibus?
                 Saepe eveniet exercitationem consequatur consequuntur cumque praesentium vitae eaque cum molestias dolorem autem accusamus aliquid, laudantium esse porro quas? Aspernatur sapiente maiores enim temporibus tenetur illo, fugiat consectetur cumque in?
