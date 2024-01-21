@@ -1,16 +1,16 @@
 .header {
-  background: #f9b713;
-  height: 200px;
+  background: #1391f9;
+  height: 150px;
 }
 
 #headerLogo {
   display: inline-block;
   width: 25%;
   margin: 0;
-  padding-top: 75px;
+  padding: 60px 0 0 40px;
   text-align: left;
   color: white;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .nav-container {

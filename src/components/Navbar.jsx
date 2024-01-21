@@ -3,9 +3,10 @@ import '../styles/Navbar.css';
 
 function Navbar() {
     // const currentPage = useLocation().pathname;
-
+ 
   return (
     <ul className="nav nav-tabs" id='navbar'>
+    {/* <ul className="navbar-nav" id='navbar'> */}
     <li className="nav-item">
       <Link
         to="/"
@@ -40,9 +41,6 @@ function Navbar() {
     </li>
   </ul>
 
-    // <div >
-    //   <div >This is the navbar</div>
-    // </div>
   );
 }
 
