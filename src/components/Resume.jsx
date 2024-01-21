@@ -1,4 +1,5 @@
 import List from './List';
+import '../styles/Resume.css'
 
 
 function Resume(){
@@ -9,7 +10,7 @@ function Resume(){
 
 
     return (
-        <div>
+        <div className='resume-container'>
             <h2>Resume</h2>
             <p>Download my <a href="/FakeResume.pdf" download>resume</a></p>
             <h3>Front End Proficiencies</h3>

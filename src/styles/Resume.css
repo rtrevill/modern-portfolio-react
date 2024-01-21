@@ -1,0 +1,27 @@
+.resume-container{
+    padding-left: 75px;
+    font-size: 2.3rem;
+}
+
+h3{
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #C97F16;
+    margin-top: 40px;
+}
+
+h2{
+    font-size: 4rem;
+    font-weight: 700;
+    text-decoration: underline;
+    color:#C97F16;
+    margin: 50px 0; 
+}
+
+a{
+    color: rgb(231, 189, 138);
+}
+
+a:hover{
+    color: rgb(240, 154, 48);
+}
