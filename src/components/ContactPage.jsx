@@ -3,12 +3,14 @@ import Contact from "./Contact"
 function ContactPage(){
 
     const processSubmit = (data) =>{
-        console.log(data.name)
+        const {name, email, message} = data;
+        console.log(name, email, message);
     }
 
     return(
         <div>
             <Contact 
+                submitOkay={'Okay for now'}
                 onSubmit={processSubmit}
                 />
         </div>

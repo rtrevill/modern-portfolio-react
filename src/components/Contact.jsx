@@ -1,25 +1,51 @@
 import { useState } from "react";
+import '../styles/Contact.css'
 
 
 function Contact(props){
     const [nameData, setNameData] = useState('');
     const [eMailData, setEmailData] = useState('');
     const [textData, setTextData] = useState('');
+    const [validData, setValidData] = useState('');
+    const [readyToSend, setReadyToSend] = useState('No');
 
-    const handleSubmit = (e) =>{
-        e.preventDefault();
 
-    props.onSubmit({
-        name: nameData,
-        email: eMailData,
-        message: textData
-    })
+    const submitOrNot = () =>{
+        if(readyToSend !== 'Yes'){
+            !nameData ? setValidData('name'):
+            !eMailData ? setValidData('email'):
+            setValidData('text')
+
+        return
+        }
+        else{
+            setValidData('')
+
+            props.onSubmit({
+                name: nameData,
+                email: eMailData,
+                message: textData
+            }) 
+            
+            // zero();
+        }    
     }
 
-    const handleChange = (e) => {
+    const handleSubmit = async(e) =>{
+        e.preventDefault();
+
+        // await validate();
+        await submitOrNot();
+    }
+
+    const handleChange = async(e) => {
+
+        !nameData||!eMailData||!textData ? setReadyToSend("No") : setReadyToSend("Yes");
+
         e.target.id === "Name" ? setNameData(e.target.value):
         e.target.id === "Email" ? setEmailData(e.target.value):
         setTextData(e.target.value);
+
         }
     
     return(
@@ -34,6 +60,9 @@ function Contact(props){
                 <textarea name="Message" id="Message" cols="60" rows="14" onChange={handleChange}></textarea>
                 <button>Submit</button>
             </form>
+            <p className={`"message" ${validData ==='name' ? 'inValid' : 'valid'}` }>Please enter a username</p>
+            <p className={`"message" ${validData ==='email' ? 'inValid' : 'valid'}`}>Please enter valid email</p>
+            <p className={`"message" ${validData ==='text' ? 'inValid' : 'valid'}`}>Please enter Text</p>
         </div>
     )
 }
