@@ -1,0 +1,11 @@
+.message{
+    color: black;
+}
+
+.valid{
+    display: none;
+}
+
+.inValid{
+    display: block;
+}
