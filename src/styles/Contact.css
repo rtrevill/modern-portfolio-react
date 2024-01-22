@@ -1,11 +1,29 @@
-.message{
-    color: black;
-}
-
 .valid{
     display: none;
 }
 
 .inValid{
     display: block;
+}
+
+#contactForm{
+    max-width: 775px;
+}
+
+#contactForm, h3, h1{
+    padding-left: 75px;
+
+}
+
+label{
+    display: block;
+}
+
+input, textarea{
+    width: 100%;
+    color: black;
+}
+
+button{
+    color: black;
 }
