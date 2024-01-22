@@ -45,30 +45,35 @@ function Contact(props){
         }
 
     const handleBlur = (e) =>{
-        if (e.target.id&&!e.target.value){
-            setValidData(`${e.target.id}`)
-        }
+
+        const emailcheck = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(eMailData);
+
+        (e.target.id==='Email'&&!emailcheck) ? setValidData('badEmail'):
+        (e.target.id==='Email'&&emailcheck) ? setValidData(''):
+        (e.target.id&&!e.target.value) ? setValidData(`${e.target.id}`):
+        setValidData('')
+
     }
 
     
     return(
         <div>
-            <h1>Contact Page</h1>
+            <h1>Contact</h1>
             <h3 className={`${validData === 'Submitted' ? 'inValid' : 'valid'}`}>Form submitted successfully</h3>
             <h3 className={`${validData === 'unSubmitted' ? 'inValid' : 'valid'}`}>Incomplete form data, please complete</h3>
-            <h3 className={`${validData === 'badEmail' ? 'inValid' : 'valid'}`}>Not a valid email address</h3>
             <form action="" id="contactForm" name="contactForm" onSubmit={handleSubmit}>
-                <label htmlFor="Name">UserName</label>
+                <label htmlFor="Name">Name:</label>
                 <input type="text" id="Name" className="inputs" onChange={handleChange}  onBlur={handleBlur}/>
-                <label htmlFor="Email">Email Address</label>
+                <label htmlFor="Email">Email Address:</label>
                 <input type="text" id="Email" className="inputs" onChange={handleChange} onBlur={handleBlur}/>
-                <label htmlFor="Message">Message</label>
+                <label htmlFor="Message">Message:</label>
                 <textarea name="Message" id="Message" className="inputs" cols="60" rows="14" onChange={handleChange} onBlur={handleBlur}></textarea>
+                <p className={`"message" ${validData ==='Name' ? 'inValid' : 'valid'}` }>Please enter a username</p>
+                <p className={`"message" ${validData ==='Email' ? 'inValid' : 'valid'}`}>Please enter valid email</p>
+                <p className={`"message" ${validData ==='Message' ? 'inValid' : 'valid'}`}>Please enter Text</p>
+                <p className={`${validData === 'badEmail' ? 'inValid' : 'valid'}`}>Not a valid email address</p>
                 <button>Submit</button>
             </form>
-            <p className={`"message" ${validData ==='Name' ? 'inValid' : 'valid'}` }>Please enter a username</p>
-            <p className={`"message" ${validData ==='Email' ? 'inValid' : 'valid'}`}>Please enter valid email</p>
-            <p className={`"message" ${validData ==='Message' ? 'inValid' : 'valid'}`}>Please enter Text</p>
         </div>
     )
 }
