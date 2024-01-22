@@ -1,5 +1,6 @@
 import Card from "./Project";
 import samplePortfolio from "./portDetails";
+import '../styles/Portfolio.css'
 
 
 function Portfolio(){
@@ -11,13 +12,15 @@ function Portfolio(){
             name={entry.name}
             image={entry.image}
             content={entry.details}
+            gitLink={entry.GitHubLink}
+            deployLink={entry.deployLink}
             />
         )
     })
 
     return(
         <div className="row">
-            <div className="">
+            <div className="container-for-cards">
                 {contentForPage}
             </div>
         </div>
