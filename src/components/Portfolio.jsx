@@ -1,4 +1,4 @@
-import Card from "./Project";
+import Project from "./Project";
 import samplePortfolio from "./portDetails";
 import '../styles/Portfolio.css'
 
@@ -7,7 +7,7 @@ function Portfolio(){
 
     const contentForPage = samplePortfolio.map((entry)=>{
         return(
-            <Card 
+            <Project 
             key={entry.name}
             name={entry.name}
             image={entry.image}

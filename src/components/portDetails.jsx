@@ -16,7 +16,7 @@ const samplePortfolio = [
     {
         name: "Regex Tutorial",
         details: "A tutorial gist in GitHub to decypher regular expressions",
-        GitHubLink: "https://github.com/rtrevill/Regex-tutorial",
+        GitHubLink: "https://gist.github.com/rtrevill/71aec7ae5ab10a451edb37e85a80135f",
         image: '/regex.avif',
         deployLink: '',
     },
