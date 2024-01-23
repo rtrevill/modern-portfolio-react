@@ -6,6 +6,7 @@ body{
 
 header.header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   background: #415a77;
   height: 150px;
@@ -13,19 +14,27 @@ header.header {
 }
 
 #headerLogo {
-  font-family:  'Nunito Sans', sans-serif;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  /* text-align: center; */
   width: 25%;
-  /* height: 100%; */
+  min-width: 303px;
+  height: 150px;
   margin: 0;
   padding: 0 0 0 40px;
-  text-align: left;
+  /* text-align: left; */
   color:#0d1b2a;
-  font-size: 5.5rem;
+  font-size: 5.7rem;
   font-weight: 700;
-  background-color: #e0e1dd;
-  opacity: 0.7;
-  /* background-image: url("header-back.webp"); */
+  opacity: 0.8;
+  background: linear-gradient(
+    to top,
+    rgba(64, 64, 64, 1) 0%,
+    rgba(233, 232, 232, 0) 10%,
+    rgba(233, 232, 232, 0) 90%,
+    rgba(64, 64, 64, 1) 100%
+  );
+  background-color: #e0e1dd;  
 }
 
 .nav-container {
@@ -46,11 +55,18 @@ header.header {
   color: #e0e1dd;
   border: 1px solid #e0e1dd;
   border-radius: 4px;
-  /* font-size: 2.7rem; */
 }
 
 .nav>li>a:hover{
   background-color: #0d1b2a;
+  color:#e0e1dd;
+  opacity: 0.8;
+}
+
+#about-me-title{
+  text-align: center;
+  padding: 0;
+  font-size: 4.5rem;
 }
 
 .footer{
@@ -72,4 +88,22 @@ header.header {
 .footerLogo:hover{
   opacity: 100%;
   transition: all 250ms ease-in;
+}
+
+@media screen and (max-width: 1230px){
+  #headerLogo{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 6.5rem;
+    background-color: #e0e1dd;
+    height: 100px;
+
+  }
+  .nav-container{
+    width: 100%;
+  }
+  header.header{
+    height: 220px;
+  }
 }

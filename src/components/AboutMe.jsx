@@ -3,19 +3,20 @@ import '../styles/AboutMe.css'
 function AboutMe(){
     return(
         <div className="aboutMe-container">
-            <h1>About Me</h1>
-            <img src="/cat.jpg" alt="gamer cat"/>
+            <h1 id='about-me-title'>About Me</h1>
+            <img src="/anon_avatar.jpg" alt="anonymous avatar"/>
             <div>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, quos ex? Minima sunt eligendi eos enim quisquam iusto distinctio praesentium beatae ab pariatur. Quia, itaque nemo dolore doloremque ducimus voluptatibus?
-                Saepe eveniet exercitationem consequatur consequuntur cumque praesentium vitae eaque cum molestias dolorem autem accusamus aliquid, laudantium esse porro quas? Aspernatur sapiente maiores enim temporibus tenetur illo, fugiat consectetur cumque in?
-                Exercitationem impedit rem eius ipsum, sapiente aspernatur itaque modi. Distinctio dolorem nulla, est et, veritatis, quae odit autem commodi eaque perferendis nesciunt mollitia eius dignissimos aliquid rerum harum modi in.
-                Repellendus, tenetur placeat eos nihil velit ratione cupiditate expedita tempora consequuntur veniam, enim nesciunt a unde esse laudantium? Facere obcaecati quia magni blanditiis? Et, aperiam voluptates ut harum iste officiis?
-                Cum nam repudiandae ab cumque facere corrupti voluptatum? Recusandae unde quasi qui! Corrupti ab saepe, esse iusto commodi veritatis voluptas, a cumque unde et aliquam eos delectus. Animi, aperiam alias!
-                Alias cupiditate, itaque voluptates atque placeat laboriosam dolorum rerum libero, officia, iusto doloremque. Vero nostrum architecto, consequuntur aspernatur repudiandae tempora dolore exercitationem minus, quo repellat tenetur aut quasi recusandae voluptate!
-                Reiciendis, molestiae repudiandae. Similique qui dolor quisquam tenetur cupiditate obcaecati totam? Dolores recusandae debitis nostrum dolorum maxime at non tempore a in, placeat aspernatur sequi eligendi. Aspernatur nobis totam eligendi.
-                Dolorum placeat, odio atque suscipit repellendus similique illo nulla cumque molestiae, ipsum voluptatibus? Maiores et itaque repudiandae nulla numquam tenetur quidem odio similique earum, necessitatibus quo ipsa eligendi! Pariatur, est?
-                Voluptatibus ratione optio repudiandae ad ullam nostrum exercitationem voluptatum consectetur sed distinctio provident eaque illum, dolorum consequatur dolor saepe repellendus magnam ipsam id odit ex minima, tenetur doloribus suscipit? Laboriosam!
-                Voluptatibus consectetur ullam, dolores libero, ipsa, itaque sint molestias ad doloremque corporis non dolorem laborum et ex natus laudantium maiores numquam mollitia aperiam nam voluptatem quod blanditiis. Maiores, nihil asperiores?            </div>
+            Introducing rtrevill, a budding programmer passionate about leveraging technology to solve real-world challenges.  <br></br> 
+            Born with a curiosity for code, Richard embarked on their programming journey with a thirst for knowledge and a drive to make a meaningful impact.<p></p>
+
+Currently pursuing a certificate in Web Development at Monash, Richard has immersed himself in the fundamentals of programming languages such as HTML, Javascript, NodeJs, MySQL etc. Eager to apply theoretical concepts to practical scenarios, I have engaged in hands-on projects, showcasing a growing proficiency in areas like problem solving, time management, team communacation.<p></p>
+
+During Richard's academic journey, he has actively sought opportunities to collaborate with peers, participating in online forums and group projects. Their dedication to continuous learning is evident through self-directed exploration of emerging technologies and trends in the ever-evolving tech landscape.<p></p>
+
+Outside the academic realm, Richard has begun building a portfolio of projects on platforms like GitHub, demonstrating a commitment to honing their skills and sharing their progress with the programming community. This initiative reflects Richard's belief in the collaborative nature of programming and the importance of contributing to the open-source community. <p></p>
+
+As Richard embarks on his professional journey, he brings an original perspective, a strong work ethic, and an eagerness to tackle new challenges in the dynamic world of programming. With a foundation in wine sciences, a passion for innovation, and a dedication to lifelong learning, Richard is poised to make a positive impact in the field of software development.    
+            </div>
         </div>
     )
 };
