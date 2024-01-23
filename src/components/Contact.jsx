@@ -9,35 +9,31 @@ function Contact(props){
     const [validData, setValidData] = useState('');
 
 
+    const submitData = async() =>{
+        setValidData("Submitted")
+
+        props.onSubmit({
+            name: nameData,
+            email: eMailData,
+            message: textData
+        })
+
+        setTimeout(
+            function(){
+                setValidData('');
+            },2500)
+    }
+
+    const emailcheck = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(eMailData);
 
     const handleSubmit = async(e) =>{
         e.preventDefault();
 
-        const submitData = async() =>{
-            setValidData("Submitted")
-
-            props.onSubmit({
-                name: nameData,
-                email: eMailData,
-                message: textData
-            })
-
-            setTimeout(
-                function(){
-                    setValidData('');
-                },2500)
-
-        }
-
-        const emailcheck = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(eMailData);
-
         !nameData||!eMailData||!textData ? setValidData("unSubmitted") : 
         !emailcheck ? setValidData("badEmail"): submitData()
-        
     }
 
     const handleChange = async(e) => {
-
         e.target.id === "Name" ? setNameData(e.target.value):
         e.target.id === "Email" ? setEmailData(e.target.value):
         setTextData(e.target.value);
@@ -45,14 +41,10 @@ function Contact(props){
         }
 
     const handleBlur = (e) =>{
-
-        const emailcheck = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(eMailData);
-
-        (e.target.id==='Email'&&!emailcheck) ? setValidData('badEmail'):
         (e.target.id==='Email'&&emailcheck) ? setValidData(''):
         (e.target.id&&!e.target.value) ? setValidData(`${e.target.id}`):
+        (e.target.id==='Email'&&!emailcheck) ? setValidData('badEmail'):
         setValidData('')
-
     }
 
     
@@ -68,11 +60,11 @@ function Contact(props){
                 <input type="text" id="Email" className="inputs" onChange={handleChange} onBlur={handleBlur}/>
                 <label htmlFor="Message">Message:</label>
                 <textarea name="Message" id="Message" className="inputs" cols="60" rows="14" onChange={handleChange} onBlur={handleBlur}></textarea>
-                <p className={`"message" ${validData ==='Name' ? 'inValid' : 'valid'}` }>Please enter a username</p>
-                <p className={`"message" ${validData ==='Email' ? 'inValid' : 'valid'}`}>Please enter valid email</p>
-                <p className={`"message" ${validData ==='Message' ? 'inValid' : 'valid'}`}>Please enter Text</p>
-                <p className={`${validData === 'badEmail' ? 'inValid' : 'valid'}`}>Not a valid email address</p>
                 <button>Submit</button>
+                <p className={`error-text "message" ${validData ==='Name' ? 'inValid' : 'valid'}` }>Please enter a username</p>
+                <p className={`error-text "message" ${validData ==='Email' ? 'inValid' : 'valid'}`}>Please enter valid email</p>
+                <p className={`error-text "message" ${validData ==='Message' ? 'inValid' : 'valid'}`}>Please enter text</p>
+                <p className={`error-text "message" ${validData === 'badEmail' ? 'inValid' : 'valid'}`}>Not a valid email address</p>
             </form>
         </div>
     )

@@ -1,13 +1,10 @@
 import List from './List';
 import '../styles/Resume.css'
 
-
 function Resume(){
 
     const skillsFront = ["Javascript", "CSS", "HTML", "JQuery", "responsive design", "React", "Bootstrap"]
     const skillsBack = ["MongoDB", "APIs", "Node", "Express", "MySQL, Sequelize", "Mongoose", "REST", "GraphQL"];
-
-
 
     return (
         <div className='resume-container'>
