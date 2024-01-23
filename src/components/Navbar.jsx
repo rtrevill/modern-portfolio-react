@@ -2,15 +2,14 @@ import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 function Navbar() {
-    // const currentPage = useLocation().pathname;
+    const currentPage = useLocation().pathname;
  
   return (
     <ul className="nav nav-tabs" id='navbar'>
-    {/* <ul className="navbar-nav" id='navbar'> */}
     <li className="nav-item">
       <Link
         to="/"
-        // className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
+        className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
       >
         About Me
       </Link>
@@ -18,7 +17,7 @@ function Navbar() {
     <li className="nav-item">
       <Link
         to="/Portfolio"
-        // className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
+        className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
       >
         Portfolio
       </Link>
@@ -26,7 +25,7 @@ function Navbar() {
     <li className="nav-item">
       <Link
         to="/Contact"
-        // className={currentPage === '/Blog' ? 'nav-link active' : 'nav-link'}
+        className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
       >
         Contact
       </Link>
@@ -34,7 +33,7 @@ function Navbar() {
     <li className="nav-item">
       <Link
         to="/Resume"
-        // className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
+        className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}
       >
         Resume
       </Link>

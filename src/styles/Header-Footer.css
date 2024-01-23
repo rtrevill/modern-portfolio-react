@@ -16,13 +16,11 @@ header.header {
 #headerLogo {
   display: flex;
   align-items: center;
-  /* text-align: center; */
   width: 25%;
   min-width: 303px;
   height: 150px;
   margin: 0;
   padding: 0 0 0 40px;
-  /* text-align: left; */
   color:#0d1b2a;
   font-size: 5.7rem;
   font-weight: 700;
@@ -40,7 +38,6 @@ header.header {
 .nav-container {
   display: flex;
   align-items: center;
-  /* display: inline-block; */
   width: 75%;
 }
 
@@ -51,6 +48,13 @@ header.header {
 }
 
 .nav>li>a:focus{
+  background-color: #0d1b2a;
+  color: #e0e1dd;
+  border: 1px solid #e0e1dd;
+  border-radius: 4px;
+}
+
+.nav>li>a.active{
   background-color: #0d1b2a;
   color: #e0e1dd;
   border: 1px solid #e0e1dd;

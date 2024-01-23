@@ -4,13 +4,12 @@ function ContactPage(){
 
     const processSubmit = (data) =>{
         const {name, email, message} = data;
-        console.log(name, email, message);
+        console.log("Successful", name, email, message);
     }
 
     return(
         <div>
             <Contact 
-                submitOkay={'Okay for now'}
                 onSubmit={processSubmit}
                 />
         </div>

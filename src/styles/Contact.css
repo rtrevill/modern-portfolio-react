@@ -3,7 +3,8 @@
 }
 
 .inValid{
-    display: block;
+    display: inline-block;
+    margin-left: 25px;
 }
 
 #contactForm{
@@ -12,7 +13,6 @@
 
 #contactForm, h3, h1{
     padding-left: 75px;
-
 }
 
 label{
@@ -26,4 +26,11 @@ input, textarea{
 
 button{
     color: black;
+}
+
+@media screen and (max-width: 950px){
+    #contactForm {
+        padding-left: 30px;
+        width: 90%;
+    }
 }
