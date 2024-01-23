@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/ProjectCSS.css'
 
 
-function Card(props) {
+function Project(props) {
 
 const {name, content, image, gitLink, deployLink} = props
 
@@ -19,4 +19,4 @@ const {name, content, image, gitLink, deployLink} = props
   );
 }
 
-export default Card;
+export default Project;
